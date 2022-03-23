@@ -52,7 +52,7 @@ class DialogBoxScreen {
       content: TextFormField(
         controller: dialogTextEditingController,
         decoration: const InputDecoration(
-            hintText: "enter new user name"
+            hintText: "Type the new user name"
         ),
       ),
       actions: [
