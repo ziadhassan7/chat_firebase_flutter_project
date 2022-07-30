@@ -15,7 +15,7 @@ class TextFormatterHelper {
     List<String> splitFullName = rawName.split(" ");
 
     //condition to check if name is, either a one word name, or a full name
-    if(splitFullName.length > 1){ //more than one word name
+    if(splitFullName.length > 2){ //more than one word name
       firstLetters =
           "${splitFullName[0].substring(0,1)}${splitFullName[1].substring(0,1)}".toUpperCase();
 
