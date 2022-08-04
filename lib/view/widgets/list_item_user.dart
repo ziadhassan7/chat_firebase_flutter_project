@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:new_firebase_project/view/screens/chat_screen.dart';
 
+import '../../controller/crud/users_crud_helper.dart';
 import '../../controller/text_formatter_helper.dart';
 
 class ListItemUser extends StatelessWidget {
@@ -58,6 +59,18 @@ class ListItemUser extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 25
                   ),
+                ),
+
+
+                ///                                                             Delete Icon
+                ///
+                const Spacer(),
+
+                InkWell(
+                  //anything inside onTap must be called in a method
+                  // (or else it will just run on UI build)
+                  onTap: () => UsersCRUDHelper().deleteUser(snapshot.data!.docs[index]['username']),
+                  child: const Icon(Icons.delete, )
                 ),
               ],
             ),
