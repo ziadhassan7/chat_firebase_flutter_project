@@ -45,7 +45,7 @@ class DialogBoxScreen {
 
 
 
-
+  // set up the AlertDialog
   showAlert () {
     AlertDialog alertDialog = AlertDialog(
       title: const Text("Add a new user"),
@@ -61,6 +61,7 @@ class DialogBoxScreen {
       ],
     );
 
+    //Show it!
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -70,10 +71,4 @@ class DialogBoxScreen {
   }
 
 }
-
-
-// set up the AlertDialog
-
-
-    // show the dialog
 
